@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Embedded Svelte App</title>
+
+	<!-- Links to the assets -->
+	<link rel="icon" type="image/png" href="path/to/favicon.png">
+	<!-- <link rel="stylesheet" href="path/to/global.css"> -->
+	<!-- <link rel="stylesheet" href="path/to/bundle.css"> -->
+
+	<style>
+		svg.svelte-dbqwma.svelte-dbqwma {
+			display: block;
+			margin: auto
+		}
+
+		.chart-inner.svelte-dbqwma path.svelte-dbqwma {
+			transition: transform 0.2s ease-in-out
+		}
+
+		.chart-inner.svelte-dbqwma path.svelte-dbqwma:hover {
+			transform: scale(1.05)
+		}
+
+		text.svelte-dbqwma.svelte-dbqwma {
+			fill: #333
+		}
+
+		.input-container.svelte-epy1v {
+			position: relative;
+			display: inline-block;
+			width: 100%
+		}
+
+		:root {
+			--fontsize: 1.4rem
+		}
+
+		.currency-symbol.svelte-epy1v {
+			position: absolute;
+			left: 10px;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: var(--fontsize);
+			color: #000;
+			pointer-events: none
+		}
+
+		.percentage-symbol.svelte-epy1v {
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: var(--fontsize);
+			color: #000;
+			pointer-events: none
+		}
+
+		.form-input.svelte-epy1v {
+			padding-left: 35px;
+			padding-right: 35px;
+			font-size: var(--fontsize);
+			font-weight: bold;
+			border: 2px solid #8f9193;
+			border-radius: 8px;
+			height: 45px;
+			width: 100%;
+			box-sizing: border-box;
+			background-color: #FFFFFF;
+			color: #000;
+			outline: none
+		}
+
+		.form-input.svelte-epy1v:focus {
+			border-color: #0066ff
+		}
+
+		.slider.svelte-rssny2 {
+			width: 100%;
+			margin-top: 20px;
+			height: 15px;
+			background-color: #ddd;
+			border-radius: 5px;
+			-webkit-appearance: none;
+			appearance: none
+		}
+
+		.slider.svelte-rssny2::-webkit-slider-runnable-track {
+			width: 100%;
+			height: 8px;
+			background-color: #ddd;
+			border-radius: 5px
+		}
+
+		.slider.svelte-rssny2::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			appearance: none;
+			width: var(--thumb-width);
+			height: var(--thumb-height);
+			background-color: #007bff;
+			border-radius: 50%;
+			cursor: pointer;
+			margin-top: calc((-1 * var(--thumb-height) / 2) + 4px);
+			box-shadow: 0 0 3px rgba(0, 0, 0, 0.2)
+		}
+
+		.slider.svelte-rssny2::-moz-range-track {
+			width: 100%;
+			height: 8px;
+			background-color: #ddd;
+			border-radius: 5px
+		}
+
+		.slider.svelte-rssny2::-moz-range-thumb {
+			width: var(--thumb-width);
+			height: var(--thumb-height);
+			background-color: #007bff;
+			border-radius: 50%;
+			cursor: pointer
+		}
+
+		.slider.svelte-rssny2::-ms-track {
+			width: 100%;
+			height: 8px;
+			background-color: transparent;
+			border-color: transparent;
+			border-width: 6px 0;
+			color: transparent;
+			border-radius: 5px
+		}
+
+		.slider.svelte-rssny2::-ms-fill-lower {
+			background-color: #ddd;
+			border-radius: 5px
+		}
+
+		.slider.svelte-rssny2::-ms-fill-upper {
+			background-color: #ddd;
+			border-radius: 5px
+		}
+
+		.slider.svelte-rssny2::-ms-thumb {
+			width: var(--thumb-width);
+			height: var(--thumb-height);
+			background-color: #007bff;
+			border-radius: 50%;
+			cursor: pointer
+		}
+
+		:root {
+			--thumb-width: 30px;
+			--thumb-height: 30px
+		}
+
+		:root {
+			--primary-color: #0255A3;
+			--primary-hover-color: #005bb5;
+			--secondary-color: #00c6ff;
+			--secondary-hover-color: #0072ff;
+			--background-color: #ffffff;
+			--border-color: #ddd;
+			--light-gray-color: #e0e0e0;
+			--shadow-color: rgba(0, 0, 0, 0.1);
+			--principal-color: #0255A3;
+			--tax-color: #CD0000;
+			--insurance-color: #FFC528;
+			--input-focus-color: #007aff;
+			--input-background-color: #f9f9f9
+		}
+
+		.container.svelte-ie5lac.svelte-ie5lac {
+			display: flex;
+			justify-content: space-between;
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px 0;
+			gap: 40px;
+			flex-wrap: wrap
+		}
+
+		.form.svelte-ie5lac.svelte-ie5lac {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			width: 30%;
+			min-width: 250px;
+			flex-grow: 1
+		}
+
+		@media(max-width: 768px) {
+			.form.svelte-ie5lac.svelte-ie5lac {
+				width: 100%;
+				padding: 0 10px
+			}
+		}
+
+		.results-container.svelte-ie5lac.svelte-ie5lac {
+			padding: 40px;
+			border-radius: 8px;
+			background-color: var(--background-color);
+			flex-grow: 2;
+			box-sizing: border-box;
+			box-shadow: 0px 4px 10px var(--shadow-color);
+			border: 1px solid var(--border-color);
+			margin-top: 20px;
+			font-size: 1.2rem;
+			width: 65%
+		}
+
+		@media(max-width: 768px) {
+			.results-container.svelte-ie5lac.svelte-ie5lac {
+				width: 100%;
+				padding: 20px;
+				margin-top: 20px
+			}
+		}
+
+		.start-over-button.svelte-ie5lac.svelte-ie5lac {
+			background-color: var(--primary-color);
+			color: white;
+			padding: 14px;
+			border: none;
+			border-radius: 8px;
+			font-size: 1rem;
+			cursor: pointer;
+			text-align: center;
+			width: 100%;
+			transition: background-color 0.3s ease
+		}
+
+		.start-over-button.svelte-ie5lac.svelte-ie5lac:hover {
+			background-color: var(--primary-hover-color)
+		}
+
+		.breakdown-container.svelte-ie5lac.svelte-ie5lac {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			gap: 20px;
+			width: 100%
+		}
+
+		.breakdown-chart.svelte-ie5lac.svelte-ie5lac {
+			display: flex;
+			justify-content: center;
+			width: 60%
+		}
+
+		.breakdown-labels.svelte-ie5lac.svelte-ie5lac {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			width: 40%;
+			font-size: 1.1rem
+		}
+
+		.label-item.svelte-ie5lac.svelte-ie5lac {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px 0;
+			border-bottom: 1px solid var(--light-gray-color)
+		}
+
+		.label-color.svelte-ie5lac.svelte-ie5lac {
+			width: 16px;
+			height: 16px;
+			border-radius: 50%;
+			margin-right: 10px
+		}
+
+		h2.svelte-ie5lac.svelte-ie5lac {
+			font-size: 2rem;
+			font-weight: bold;
+			margin-bottom: 20px
+		}
+
+		.label-text.svelte-ie5lac.svelte-ie5lac {
+			display: flex;
+			align-items: center
+		}
+
+		.total.svelte-ie5lac.svelte-ie5lac {
+			padding-top: 15px;
+			border-top: 2px solid var(--light-gray-color)
+		}
+
+		@media(max-width: 768px) {
+			.label-item.svelte-ie5lac.svelte-ie5lac {
+				flex-direction: column;
+				gap: 5px
+			}
+
+			.label-text.svelte-ie5lac.svelte-ie5lac {
+				width: 100%
+			}
+		}
+
+		.principal-color.svelte-ie5lac.svelte-ie5lac {
+			background-color: var(--principal-color)
+		}
+
+		.tax-color.svelte-ie5lac.svelte-ie5lac {
+			background-color: var(--tax-color)
+		}
+
+		.insurance-color.svelte-ie5lac.svelte-ie5lac {
+			background-color: var(--insurance-color)
+		}
+
+		.form.svelte-ie5lac select.svelte-ie5lac {
+			padding: 14px;
+			border: 1px solid var(--border-color);
+			border-radius: 8px;
+			font-size: 1.1rem;
+			width: 100%;
+			box-sizing: border-box
+		}
+
+		.form.svelte-ie5lac label.svelte-ie5lac {
+			font-weight: bold;
+			font-size: 1rem
+		}
+
+		.down-payment-inputs.svelte-ie5lac.svelte-ie5lac {
+			display: flex;
+			gap: 10px
+		}
+
+		.toggle-settings-button.svelte-ie5lac.svelte-ie5lac {
+			background: linear-gradient(to right, var(--secondary-color), var(--secondary-hover-color));
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 25px;
+			font-size: 1rem;
+			cursor: pointer;
+			width: 100%;
+			text-align: center;
+			margin-top: 20px;
+			transition: background-color 0.3s ease, box-shadow 0.3s ease
+		}
+
+		.toggle-settings-button.svelte-ie5lac.svelte-ie5lac:hover {
+			background: linear-gradient(to right, var(--secondary-hover-color), var(--secondary-color));
+			box-shadow: 0px 8px 15px rgba(0, 118, 255, 0.3)
+		}
+
+		.advanced-settings.svelte-ie5lac.svelte-ie5lac {
+			margin-top: 20px;
+			padding: 20px;
+			background-color: var(--input-background-color);
+			border-radius: 15px;
+			box-shadow: 0px 4px 10px var(--shadow-color)
+		}
+	</style>
+
+	<!-- Include the Svelte app's JS -->
+	<script>
+
+
+
+	</script>
+</head>
+
+<body>
+	<!-- This is where the Svelte app will mount -->
+	<div id="svelte-app"></div>
+</body>
+
+</html>
