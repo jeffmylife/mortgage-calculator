@@ -862,6 +862,9 @@ var app = (function () {
 	 * to provide intellisense and to use the component like this in a Svelte file
 	 * with TypeScript:
 	 * ```svelte
+	 * <script lang="ts">
+	 * 	import { MyComponent } from "component-library";
+	 * </script>
 	 * <MyComponent foo={'bar'} />
 	 * ```
 	 * @template {Record<string, any>} [Props=any]
@@ -22477,7 +22480,7 @@ var app = (function () {
 	const { Object: Object_1 } = globals;
 	const file = "src/App.svelte";
 
-	// (146:8) {#if showAdvancedSettings}
+	// (145:8) {#if showAdvancedSettings}
 	function create_if_block(ctx) {
 		let div;
 		let h3;
@@ -22498,7 +22501,7 @@ var app = (function () {
 		let current;
 
 		function numberinput0_value_binding_1(value) {
-			/*numberinput0_value_binding_1*/ ctx[27](value);
+			/*numberinput0_value_binding_1*/ ctx[26](value);
 		}
 
 		let numberinput0_props = {
@@ -22517,10 +22520,10 @@ var app = (function () {
 			});
 
 		binding_callbacks.push(() => bind(numberinput0, 'value', numberinput0_value_binding_1));
-		numberinput0.$on("input", /*calculateMortgage*/ ctx[14]);
+		numberinput0.$on("input", /*calculateMortgage*/ ctx[13]);
 
 		function numberinput1_value_binding_1(value) {
-			/*numberinput1_value_binding_1*/ ctx[28](value);
+			/*numberinput1_value_binding_1*/ ctx[27](value);
 		}
 
 		let numberinput1_props = {
@@ -22539,7 +22542,7 @@ var app = (function () {
 			});
 
 		binding_callbacks.push(() => bind(numberinput1, 'value', numberinput1_value_binding_1));
-		numberinput1.$on("input", /*calculateMortgage*/ ctx[14]);
+		numberinput1.$on("input", /*calculateMortgage*/ ctx[13]);
 
 		const block = {
 			c: function create() {
@@ -22560,17 +22563,17 @@ var app = (function () {
 				t7 = space();
 				p1 = element("p");
 				p1.textContent = "Homeowners insurance is usually about 0.35% of the home's value annually, but this amount can fluctuate based on the insurer.";
-				add_location(h3, file, 147, 12, 4713);
+				add_location(h3, file, 146, 12, 4666);
 				attr_dev(label0, "for", "propertyTax");
-				attr_dev(label0, "class", "svelte-ie5lac");
-				add_location(label0, file, 149, 12, 4753);
-				add_location(p0, file, 153, 12, 4982);
+				attr_dev(label0, "class", "svelte-1lo8aoa");
+				add_location(label0, file, 148, 12, 4706);
+				add_location(p0, file, 152, 12, 4935);
 				attr_dev(label1, "for", "insurance");
-				attr_dev(label1, "class", "svelte-ie5lac");
-				add_location(label1, file, 155, 12, 5214);
-				add_location(p1, file, 160, 12, 5449);
-				attr_dev(div, "class", "advanced-settings svelte-ie5lac");
-				add_location(div, file, 146, 8, 4669);
+				attr_dev(label1, "class", "svelte-1lo8aoa");
+				add_location(label1, file, 154, 12, 5167);
+				add_location(p1, file, 159, 12, 5402);
+				attr_dev(div, "class", "advanced-settings svelte-1lo8aoa");
+				add_location(div, file, 145, 8, 4622);
 			},
 			m: function mount(target, anchor) {
 				insert_dev(target, div, anchor);
@@ -22634,7 +22637,7 @@ var app = (function () {
 			block,
 			id: create_if_block.name,
 			type: "if",
-			source: "(146:8) {#if showAdvancedSettings}",
+			source: "(145:8) {#if showAdvancedSettings}",
 			ctx
 		});
 
@@ -22658,96 +22661,92 @@ var app = (function () {
 		let t6;
 		let label1;
 		let t7;
-		let p;
-		let t8;
-		let t9;
-		let t10;
 		let div0;
 		let numberinput1;
 		let updating_value_2;
-		let t11;
+		let t8;
 		let numberinput2;
 		let updating_value_3;
-		let t12;
+		let t9;
 		let sliderinput1;
 		let updating_value_4;
-		let t13;
+		let t10;
 		let label2;
-		let t14;
+		let t11;
 		let select;
 		let option0;
 		let option1;
-		let t17;
+		let t14;
 		let label3;
-		let t18;
+		let t15;
 		let numberinput3;
 		let updating_value_5;
-		let t19;
+		let t16;
 		let sliderinput2;
 		let updating_value_6;
-		let t20;
+		let t17;
 		let button0;
 
-		let t21_value = (/*showAdvancedSettings*/ ctx[7]
+		let t18_value = (/*showAdvancedSettings*/ ctx[7]
 		? 'Hide Advanced Settings'
 		: 'Show Advanced Settings') + "";
 
-		let t21;
-		let t22;
-		let t23;
+		let t18;
+		let t19;
+		let t20;
 		let button1;
-		let t25;
+		let t22;
 		let div18;
 		let h21;
-		let t27;
+		let t24;
 		let div17;
 		let div2;
 		let donutchart;
-		let t28;
+		let t25;
 		let div16;
 		let div6;
 		let div4;
 		let div3;
-		let t29;
-		let t30;
+		let t26;
+		let t27;
 		let div5;
 		let strong0;
-		let t31_value = formatCurrency(Math.round(/*principalInterest*/ ctx[10])) + "";
-		let t31;
-		let t32;
+		let t28_value = formatCurrency(Math.round(/*principalInterest*/ ctx[10])) + "";
+		let t28;
+		let t29;
 		let div10;
 		let div8;
 		let div7;
-		let t33;
-		let t34;
+		let t30;
+		let t31;
 		let div9;
 		let strong1;
-		let t35_value = formatCurrency(Math.round(/*propertyTax*/ ctx[8] / 12)) + "";
-		let t35;
-		let t36;
+		let t32_value = formatCurrency(Math.round(/*propertyTax*/ ctx[8] / 12)) + "";
+		let t32;
+		let t33;
 		let div14;
 		let div12;
 		let div11;
-		let t37;
-		let t38;
+		let t34;
+		let t35;
 		let div13;
 		let strong2;
-		let t39_value = formatCurrency(Math.round(/*insurance*/ ctx[9] / 12)) + "";
-		let t39;
-		let t40;
+		let t36_value = formatCurrency(Math.round(/*insurance*/ ctx[9] / 12)) + "";
+		let t36;
+		let t37;
 		let div15;
 		let strong3;
-		let t42;
+		let t39;
 		let strong4;
-		let t43_value = formatCurrency(Math.round(/*totalMonthlyPayment*/ ctx[11])) + "";
-		let t43;
-		let t44;
+		let t40_value = formatCurrency(Math.round(/*totalMonthlyPayment*/ ctx[11])) + "";
+		let t40;
+		let t41;
 		let current;
 		let mounted;
 		let dispose;
 
 		function numberinput0_value_binding(value) {
-			/*numberinput0_value_binding*/ ctx[19](value);
+			/*numberinput0_value_binding*/ ctx[18](value);
 		}
 
 		let numberinput0_props = { minRange: "50000", maxRange: "20000000" };
@@ -22762,10 +22761,10 @@ var app = (function () {
 			});
 
 		binding_callbacks.push(() => bind(numberinput0, 'value', numberinput0_value_binding));
-		numberinput0.$on("input", /*calculateMortgage*/ ctx[14]);
+		numberinput0.$on("input", /*calculateMortgage*/ ctx[13]);
 
 		function sliderinput0_value_binding(value) {
-			/*sliderinput0_value_binding*/ ctx[20](value);
+			/*sliderinput0_value_binding*/ ctx[19](value);
 		}
 
 		let sliderinput0_props = {
@@ -22786,7 +22785,7 @@ var app = (function () {
 		binding_callbacks.push(() => bind(sliderinput0, 'value', sliderinput0_value_binding));
 
 		function numberinput1_value_binding(value) {
-			/*numberinput1_value_binding*/ ctx[21](value);
+			/*numberinput1_value_binding*/ ctx[20](value);
 		}
 
 		let numberinput1_props = {
@@ -22804,11 +22803,11 @@ var app = (function () {
 			});
 
 		binding_callbacks.push(() => bind(numberinput1, 'value', numberinput1_value_binding));
-		numberinput1.$on("click", /*onDownPaymentClick*/ ctx[17]);
-		numberinput1.$on("blur", /*onDownPaymentBlur*/ ctx[18]);
+		numberinput1.$on("click", /*onDownPaymentClick*/ ctx[16]);
+		numberinput1.$on("blur", /*onDownPaymentBlur*/ ctx[17]);
 
 		function numberinput2_value_binding(value) {
-			/*numberinput2_value_binding*/ ctx[22](value);
+			/*numberinput2_value_binding*/ ctx[21](value);
 		}
 
 		let numberinput2_props = { isPercentage: true };
@@ -22825,7 +22824,7 @@ var app = (function () {
 		binding_callbacks.push(() => bind(numberinput2, 'value', numberinput2_value_binding));
 
 		function sliderinput1_value_binding(value) {
-			/*sliderinput1_value_binding*/ ctx[23](value);
+			/*sliderinput1_value_binding*/ ctx[22](value);
 		}
 
 		let sliderinput1_props = {
@@ -22846,7 +22845,7 @@ var app = (function () {
 		binding_callbacks.push(() => bind(sliderinput1, 'value', sliderinput1_value_binding));
 
 		function numberinput3_value_binding(value) {
-			/*numberinput3_value_binding*/ ctx[25](value);
+			/*numberinput3_value_binding*/ ctx[24](value);
 		}
 
 		let numberinput3_props = { isPercentage: true };
@@ -22861,10 +22860,10 @@ var app = (function () {
 			});
 
 		binding_callbacks.push(() => bind(numberinput3, 'value', numberinput3_value_binding));
-		numberinput3.$on("input", /*calculateMortgage*/ ctx[14]);
+		numberinput3.$on("input", /*calculateMortgage*/ ctx[13]);
 
 		function sliderinput2_value_binding(value) {
-			/*sliderinput2_value_binding*/ ctx[26](value);
+			/*sliderinput2_value_binding*/ ctx[25](value);
 		}
 
 		let sliderinput2_props = {
@@ -22883,7 +22882,7 @@ var app = (function () {
 			});
 
 		binding_callbacks.push(() => bind(sliderinput2, 'value', sliderinput2_value_binding));
-		sliderinput2.$on("input", /*calculateMortgage*/ ctx[14]);
+		sliderinput2.$on("input", /*calculateMortgage*/ ctx[13]);
 		let if_block = /*showAdvancedSettings*/ ctx[7] && create_if_block(ctx);
 
 		donutchart = new DonutChart({
@@ -22909,156 +22908,151 @@ var app = (function () {
 				t6 = space();
 				label1 = element("label");
 				t7 = text$1("Down payment\n            ");
-				p = element("p");
-				t8 = text$1("Active input: ");
-				t9 = text$1(/*activeInput*/ ctx[13]);
-				t10 = space();
 				div0 = element("div");
 				create_component(numberinput1.$$.fragment);
-				t11 = space();
+				t8 = space();
 				create_component(numberinput2.$$.fragment);
-				t12 = space();
+				t9 = space();
 				create_component(sliderinput1.$$.fragment);
-				t13 = space();
+				t10 = space();
 				label2 = element("label");
-				t14 = text$1("Loan term\n            ");
+				t11 = text$1("Loan term\n            ");
 				select = element("select");
 				option0 = element("option");
 				option0.textContent = "15 years";
 				option1 = element("option");
 				option1.textContent = "30 years";
-				t17 = space();
+				t14 = space();
 				label3 = element("label");
-				t18 = text$1("Interest rate (%)\n            ");
+				t15 = text$1("Interest rate (%)\n            ");
 				create_component(numberinput3.$$.fragment);
-				t19 = space();
+				t16 = space();
 				create_component(sliderinput2.$$.fragment);
-				t20 = space();
+				t17 = space();
 				button0 = element("button");
-				t21 = text$1(t21_value);
-				t22 = space();
+				t18 = text$1(t18_value);
+				t19 = space();
 				if (if_block) if_block.c();
-				t23 = space();
+				t20 = space();
 				button1 = element("button");
 				button1.textContent = "Start Over";
-				t25 = space();
+				t22 = space();
 				div18 = element("div");
 				h21 = element("h2");
 				h21.textContent = "Estimated Monthly Payment Breakdown";
-				t27 = space();
+				t24 = space();
 				div17 = element("div");
 				div2 = element("div");
 				create_component(donutchart.$$.fragment);
-				t28 = space();
+				t25 = space();
 				div16 = element("div");
 				div6 = element("div");
 				div4 = element("div");
 				div3 = element("div");
-				t29 = text$1("\n                        Principal & Interest");
-				t30 = space();
+				t26 = text$1("\n                        Principal & Interest");
+				t27 = space();
 				div5 = element("div");
 				strong0 = element("strong");
-				t31 = text$1(t31_value);
-				t32 = space();
+				t28 = text$1(t28_value);
+				t29 = space();
 				div10 = element("div");
 				div8 = element("div");
 				div7 = element("div");
-				t33 = text$1("\n                        Property Tax");
-				t34 = space();
+				t30 = text$1("\n                        Property Tax");
+				t31 = space();
 				div9 = element("div");
 				strong1 = element("strong");
-				t35 = text$1(t35_value);
-				t36 = space();
+				t32 = text$1(t32_value);
+				t33 = space();
 				div14 = element("div");
 				div12 = element("div");
 				div11 = element("div");
-				t37 = text$1("\n                        Homeowner's Insurance");
-				t38 = space();
+				t34 = text$1("\n                        Homeowner's Insurance");
+				t35 = space();
 				div13 = element("div");
 				strong2 = element("strong");
-				t39 = text$1(t39_value);
-				t40 = space();
+				t36 = text$1(t36_value);
+				t37 = space();
 				div15 = element("div");
 				strong3 = element("strong");
 				strong3.textContent = "Total:";
-				t42 = space();
+				t39 = space();
 				strong4 = element("strong");
-				t43 = text$1(t43_value);
-				t44 = text$1(" / Month");
+				t40 = text$1(t40_value);
+				t41 = text$1(" / Month");
 				add_location(h1, file, 104, 0, 2872);
-				attr_dev(h20, "class", "svelte-ie5lac");
+				attr_dev(h20, "class", "svelte-1lo8aoa");
 				add_location(h20, file, 108, 8, 2957);
 				attr_dev(label0, "for", "homePrice");
-				attr_dev(label0, "class", "svelte-ie5lac");
+				attr_dev(label0, "class", "svelte-1lo8aoa");
 				add_location(label0, file, 110, 8, 3006);
-				add_location(p, file, 118, 12, 3357);
-				attr_dev(div0, "class", "down-payment-inputs svelte-ie5lac");
-				add_location(div0, file, 119, 12, 3404);
+				attr_dev(div0, "class", "down-payment-inputs svelte-1lo8aoa");
+				add_location(div0, file, 118, 12, 3357);
 				attr_dev(label1, "for", "downPayment");
-				attr_dev(label1, "class", "svelte-ie5lac");
+				attr_dev(label1, "class", "svelte-1lo8aoa");
 				add_location(label1, file, 116, 8, 3294);
 				option0.__value = 15;
 				set_input_value(option0, option0.__value);
-				add_location(option0, file, 129, 16, 3942);
+				add_location(option0, file, 128, 16, 3895);
 				option1.__value = 30;
 				set_input_value(option1, option1.__value);
-				add_location(option1, file, 130, 16, 3995);
-				attr_dev(select, "class", "svelte-ie5lac");
-				if (/*loanTerm*/ ctx[3] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[24].call(select));
-				add_location(select, file, 128, 12, 3865);
-				attr_dev(label2, "class", "svelte-ie5lac");
-				add_location(label2, file, 126, 8, 3823);
+				add_location(option1, file, 129, 16, 3948);
+				attr_dev(select, "class", "svelte-1lo8aoa");
+				if (/*loanTerm*/ ctx[3] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[23].call(select));
+				add_location(select, file, 127, 12, 3818);
+				attr_dev(label2, "class", "svelte-1lo8aoa");
+				add_location(label2, file, 125, 8, 3776);
 				attr_dev(label3, "for", "interestRate");
-				attr_dev(label3, "class", "svelte-ie5lac");
-				add_location(label3, file, 134, 8, 4080);
-				attr_dev(button0, "class", "toggle-settings-button svelte-ie5lac");
-				add_location(button0, file, 141, 8, 4444);
-				attr_dev(button1, "class", "start-over-button svelte-ie5lac");
-				add_location(button1, file, 164, 8, 5620);
-				attr_dev(div1, "class", "form svelte-ie5lac");
+				attr_dev(label3, "class", "svelte-1lo8aoa");
+				add_location(label3, file, 133, 8, 4033);
+				attr_dev(button0, "class", "toggle-settings-button svelte-1lo8aoa");
+				add_location(button0, file, 140, 8, 4397);
+				attr_dev(button1, "class", "start-over-button svelte-1lo8aoa");
+				add_location(button1, file, 163, 8, 5573);
+				attr_dev(div1, "class", "form svelte-1lo8aoa");
 				add_location(div1, file, 107, 4, 2930);
-				attr_dev(h21, "class", "svelte-ie5lac");
-				add_location(h21, file, 168, 8, 5751);
-				attr_dev(div2, "class", "breakdown-chart svelte-ie5lac");
-				add_location(div2, file, 170, 12, 5850);
-				attr_dev(div3, "class", "label-color principal-color svelte-ie5lac");
-				add_location(div3, file, 176, 24, 6098);
-				attr_dev(div4, "class", "label-text svelte-ie5lac");
-				add_location(div4, file, 175, 20, 6049);
-				add_location(strong0, file, 180, 24, 6288);
+				attr_dev(h21, "class", "svelte-1lo8aoa");
+				add_location(h21, file, 167, 8, 5704);
+				attr_dev(div2, "class", "breakdown-chart svelte-1lo8aoa");
+				add_location(div2, file, 169, 12, 5803);
+				attr_dev(div3, "class", "label-color principal-color svelte-1lo8aoa");
+				add_location(div3, file, 175, 24, 6051);
+				attr_dev(div4, "class", "label-text svelte-1lo8aoa");
+				add_location(div4, file, 174, 20, 6002);
+				add_location(strong0, file, 179, 24, 6241);
 				attr_dev(div5, "class", "label-value");
-				add_location(div5, file, 179, 20, 6238);
-				attr_dev(div6, "class", "label-item svelte-ie5lac");
-				add_location(div6, file, 174, 16, 6004);
-				attr_dev(div7, "class", "label-color tax-color svelte-ie5lac");
-				add_location(div7, file, 186, 24, 6514);
-				attr_dev(div8, "class", "label-text svelte-ie5lac");
-				add_location(div8, file, 185, 20, 6465);
-				add_location(strong1, file, 190, 24, 6690);
+				add_location(div5, file, 178, 20, 6191);
+				attr_dev(div6, "class", "label-item svelte-1lo8aoa");
+				add_location(div6, file, 173, 16, 5957);
+				attr_dev(div7, "class", "label-color tax-color svelte-1lo8aoa");
+				add_location(div7, file, 185, 24, 6467);
+				attr_dev(div8, "class", "label-text svelte-1lo8aoa");
+				add_location(div8, file, 184, 20, 6418);
+				add_location(strong1, file, 189, 24, 6643);
 				attr_dev(div9, "class", "label-value");
-				add_location(div9, file, 189, 20, 6640);
-				attr_dev(div10, "class", "label-item svelte-ie5lac");
-				add_location(div10, file, 184, 16, 6420);
-				attr_dev(div11, "class", "label-color insurance-color svelte-ie5lac");
-				add_location(div11, file, 196, 24, 6915);
-				attr_dev(div12, "class", "label-text svelte-ie5lac");
-				add_location(div12, file, 195, 20, 6866);
-				add_location(strong2, file, 200, 24, 7106);
+				add_location(div9, file, 188, 20, 6593);
+				attr_dev(div10, "class", "label-item svelte-1lo8aoa");
+				add_location(div10, file, 183, 16, 6373);
+				attr_dev(div11, "class", "label-color insurance-color svelte-1lo8aoa");
+				add_location(div11, file, 195, 24, 6868);
+				attr_dev(div12, "class", "label-text svelte-1lo8aoa");
+				add_location(div12, file, 194, 20, 6819);
+				add_location(strong2, file, 199, 24, 7059);
 				attr_dev(div13, "class", "label-value");
-				add_location(div13, file, 199, 20, 7056);
-				attr_dev(div14, "class", "label-item svelte-ie5lac");
-				add_location(div14, file, 194, 16, 6821);
-				add_location(strong3, file, 205, 20, 7286);
-				add_location(strong4, file, 206, 20, 7330);
-				attr_dev(div15, "class", "label-item total svelte-ie5lac");
-				add_location(div15, file, 204, 16, 7235);
-				attr_dev(div16, "class", "breakdown-labels svelte-ie5lac");
-				add_location(div16, file, 173, 12, 5957);
-				attr_dev(div17, "class", "breakdown-container svelte-ie5lac");
-				add_location(div17, file, 169, 8, 5804);
-				attr_dev(div18, "class", "results-container svelte-ie5lac");
-				add_location(div18, file, 167, 4, 5711);
-				attr_dev(div19, "class", "container svelte-ie5lac");
+				add_location(div13, file, 198, 20, 7009);
+				attr_dev(div14, "class", "label-item svelte-1lo8aoa");
+				add_location(div14, file, 193, 16, 6774);
+				add_location(strong3, file, 204, 20, 7239);
+				add_location(strong4, file, 205, 20, 7283);
+				attr_dev(div15, "class", "label-item total svelte-1lo8aoa");
+				add_location(div15, file, 203, 16, 7188);
+				attr_dev(div16, "class", "breakdown-labels svelte-1lo8aoa");
+				add_location(div16, file, 172, 12, 5910);
+				attr_dev(div17, "class", "breakdown-container svelte-1lo8aoa");
+				add_location(div17, file, 168, 8, 5757);
+				attr_dev(div18, "class", "results-container svelte-1lo8aoa");
+				add_location(div18, file, 166, 4, 5664);
+				attr_dev(div19, "class", "container svelte-1lo8aoa");
 				add_location(div19, file, 106, 0, 2902);
 			},
 			l: function claim(nodes) {
@@ -23079,86 +23073,82 @@ var app = (function () {
 				append_dev(div1, t6);
 				append_dev(div1, label1);
 				append_dev(label1, t7);
-				append_dev(label1, p);
-				append_dev(p, t8);
-				append_dev(p, t9);
-				append_dev(label1, t10);
 				append_dev(label1, div0);
 				mount_component(numberinput1, div0, null);
-				append_dev(div0, t11);
+				append_dev(div0, t8);
 				mount_component(numberinput2, div0, null);
-				append_dev(label1, t12);
+				append_dev(label1, t9);
 				mount_component(sliderinput1, label1, null);
-				append_dev(div1, t13);
+				append_dev(div1, t10);
 				append_dev(div1, label2);
-				append_dev(label2, t14);
+				append_dev(label2, t11);
 				append_dev(label2, select);
 				append_dev(select, option0);
 				append_dev(select, option1);
 				select_option(select, /*loanTerm*/ ctx[3], true);
-				append_dev(div1, t17);
+				append_dev(div1, t14);
 				append_dev(div1, label3);
-				append_dev(label3, t18);
+				append_dev(label3, t15);
 				mount_component(numberinput3, label3, null);
-				append_dev(label3, t19);
+				append_dev(label3, t16);
 				mount_component(sliderinput2, label3, null);
-				append_dev(div1, t20);
+				append_dev(div1, t17);
 				append_dev(div1, button0);
-				append_dev(button0, t21);
-				append_dev(div1, t22);
+				append_dev(button0, t18);
+				append_dev(div1, t19);
 				if (if_block) if_block.m(div1, null);
-				append_dev(div1, t23);
+				append_dev(div1, t20);
 				append_dev(div1, button1);
-				append_dev(div19, t25);
+				append_dev(div19, t22);
 				append_dev(div19, div18);
 				append_dev(div18, h21);
-				append_dev(div18, t27);
+				append_dev(div18, t24);
 				append_dev(div18, div17);
 				append_dev(div17, div2);
 				mount_component(donutchart, div2, null);
-				append_dev(div17, t28);
+				append_dev(div17, t25);
 				append_dev(div17, div16);
 				append_dev(div16, div6);
 				append_dev(div6, div4);
 				append_dev(div4, div3);
-				append_dev(div4, t29);
-				append_dev(div6, t30);
+				append_dev(div4, t26);
+				append_dev(div6, t27);
 				append_dev(div6, div5);
 				append_dev(div5, strong0);
-				append_dev(strong0, t31);
-				append_dev(div16, t32);
+				append_dev(strong0, t28);
+				append_dev(div16, t29);
 				append_dev(div16, div10);
 				append_dev(div10, div8);
 				append_dev(div8, div7);
-				append_dev(div8, t33);
-				append_dev(div10, t34);
+				append_dev(div8, t30);
+				append_dev(div10, t31);
 				append_dev(div10, div9);
 				append_dev(div9, strong1);
-				append_dev(strong1, t35);
-				append_dev(div16, t36);
+				append_dev(strong1, t32);
+				append_dev(div16, t33);
 				append_dev(div16, div14);
 				append_dev(div14, div12);
 				append_dev(div12, div11);
-				append_dev(div12, t37);
-				append_dev(div14, t38);
+				append_dev(div12, t34);
+				append_dev(div14, t35);
 				append_dev(div14, div13);
 				append_dev(div13, strong2);
-				append_dev(strong2, t39);
-				append_dev(div16, t40);
+				append_dev(strong2, t36);
+				append_dev(div16, t37);
 				append_dev(div16, div15);
 				append_dev(div15, strong3);
-				append_dev(div15, t42);
+				append_dev(div15, t39);
 				append_dev(div15, strong4);
-				append_dev(strong4, t43);
-				append_dev(strong4, t44);
+				append_dev(strong4, t40);
+				append_dev(strong4, t41);
 				current = true;
 
 				if (!mounted) {
 					dispose = [
-						listen_dev(select, "change", /*select_change_handler*/ ctx[24]),
-						listen_dev(select, "change", /*calculateMortgage*/ ctx[14], false, false, false, false),
-						listen_dev(button0, "click", /*toggleAdvancedSettings*/ ctx[16], false, false, false, false),
-						listen_dev(button1, "click", /*resetForm*/ ctx[15], false, false, false, false)
+						listen_dev(select, "change", /*select_change_handler*/ ctx[23]),
+						listen_dev(select, "change", /*calculateMortgage*/ ctx[13], false, false, false, false),
+						listen_dev(button0, "click", /*toggleAdvancedSettings*/ ctx[15], false, false, false, false),
+						listen_dev(button1, "click", /*resetForm*/ ctx[14], false, false, false, false)
 					];
 
 					mounted = true;
@@ -23183,7 +23173,6 @@ var app = (function () {
 				}
 
 				sliderinput0.$set(sliderinput0_changes);
-				if (!current || dirty & /*activeInput*/ 8192) set_data_dev(t9, /*activeInput*/ ctx[13]);
 				const numberinput1_changes = {};
 				if (dirty & /*homePrice*/ 1) numberinput1_changes.maxRange = /*homePrice*/ ctx[0];
 
@@ -23236,9 +23225,9 @@ var app = (function () {
 
 				sliderinput2.$set(sliderinput2_changes);
 
-				if ((!current || dirty & /*showAdvancedSettings*/ 128) && t21_value !== (t21_value = (/*showAdvancedSettings*/ ctx[7]
+				if ((!current || dirty & /*showAdvancedSettings*/ 128) && t18_value !== (t18_value = (/*showAdvancedSettings*/ ctx[7]
 				? 'Hide Advanced Settings'
-				: 'Show Advanced Settings') + "")) set_data_dev(t21, t21_value);
+				: 'Show Advanced Settings') + "")) set_data_dev(t18, t18_value);
 
 				if (/*showAdvancedSettings*/ ctx[7]) {
 					if (if_block) {
@@ -23251,7 +23240,7 @@ var app = (function () {
 						if_block = create_if_block(ctx);
 						if_block.c();
 						transition_in(if_block, 1);
-						if_block.m(div1, t23);
+						if_block.m(div1, t20);
 					}
 				} else if (if_block) {
 					group_outros();
@@ -23266,10 +23255,10 @@ var app = (function () {
 				const donutchart_changes = {};
 				if (dirty & /*mortgageData*/ 4096) donutchart_changes.mortgageData = /*mortgageData*/ ctx[12];
 				donutchart.$set(donutchart_changes);
-				if ((!current || dirty & /*principalInterest*/ 1024) && t31_value !== (t31_value = formatCurrency(Math.round(/*principalInterest*/ ctx[10])) + "")) set_data_dev(t31, t31_value);
-				if ((!current || dirty & /*propertyTax*/ 256) && t35_value !== (t35_value = formatCurrency(Math.round(/*propertyTax*/ ctx[8] / 12)) + "")) set_data_dev(t35, t35_value);
-				if ((!current || dirty & /*insurance*/ 512) && t39_value !== (t39_value = formatCurrency(Math.round(/*insurance*/ ctx[9] / 12)) + "")) set_data_dev(t39, t39_value);
-				if ((!current || dirty & /*totalMonthlyPayment*/ 2048) && t43_value !== (t43_value = formatCurrency(Math.round(/*totalMonthlyPayment*/ ctx[11])) + "")) set_data_dev(t43, t43_value);
+				if ((!current || dirty & /*principalInterest*/ 1024) && t28_value !== (t28_value = formatCurrency(Math.round(/*principalInterest*/ ctx[10])) + "")) set_data_dev(t28, t28_value);
+				if ((!current || dirty & /*propertyTax*/ 256) && t32_value !== (t32_value = formatCurrency(Math.round(/*propertyTax*/ ctx[8] / 12)) + "")) set_data_dev(t32, t32_value);
+				if ((!current || dirty & /*insurance*/ 512) && t36_value !== (t36_value = formatCurrency(Math.round(/*insurance*/ ctx[9] / 12)) + "")) set_data_dev(t36, t36_value);
+				if ((!current || dirty & /*totalMonthlyPayment*/ 2048) && t40_value !== (t40_value = formatCurrency(Math.round(/*totalMonthlyPayment*/ ctx[11])) + "")) set_data_dev(t40, t40_value);
 			},
 			i: function intro(local) {
 				if (current) return;
@@ -23403,11 +23392,11 @@ var app = (function () {
 		}
 
 		function onDownPaymentClick() {
-			$$invalidate(13, activeInput = 'downPayment');
+			activeInput = 'downPayment';
 		}
 
 		function onDownPaymentBlur() {
-			$$invalidate(13, activeInput = '');
+			activeInput = '';
 		}
 
 		const writable_props = [];
@@ -23508,7 +23497,7 @@ var app = (function () {
 			if ('monthlyPayment' in $$props) monthlyPayment = $$props.monthlyPayment;
 			if ('totalMonthlyPayment' in $$props) $$invalidate(11, totalMonthlyPayment = $$props.totalMonthlyPayment);
 			if ('mortgageData' in $$props) $$invalidate(12, mortgageData = $$props.mortgageData);
-			if ('activeInput' in $$props) $$invalidate(13, activeInput = $$props.activeInput);
+			if ('activeInput' in $$props) activeInput = $$props.activeInput;
 		};
 
 		if ($$props && "$$inject" in $$props) {
@@ -23559,7 +23548,6 @@ var app = (function () {
 			principalInterest,
 			totalMonthlyPayment,
 			mortgageData,
-			activeInput,
 			calculateMortgage,
 			resetForm,
 			toggleAdvancedSettings,

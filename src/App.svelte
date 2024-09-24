@@ -209,6 +209,7 @@ $: if (insuranceRate) calculateMortgage();
         </div>
     </div>
 </div>
+
 <style>
 :root {
     --primary-color: #0255A3;
@@ -274,21 +275,24 @@ $: if (insuranceRate) calculateMortgage();
 }
 
 .start-over-button {
-    background-color: var(--primary-color);
+    background: linear-gradient(to right, var(--secondary-color), var(--secondary-hover-color));
     color: white;
-    padding: 14px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 8px;
+    border-radius: 25px;
     font-size: 1rem;
     cursor: pointer;
-    text-align: center;
     width: 100%;
-    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .start-over-button:hover {
-    background-color: var(--primary-hover-color);
+    background: linear-gradient(to right, var(--secondary-hover-color), var(--secondary-color));
+    box-shadow: 0px 8px 15px rgba(0, 118, 255, 0.3);
 }
+
 
 .breakdown-container {
     display: flex;
