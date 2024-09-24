@@ -101,9 +101,6 @@ $: if (propertyTaxRate) calculateMortgage();
 $: if (insuranceRate) calculateMortgage();
 </script>
 
-
-<h1>Mortgage Calculator</h1>
-
 <div class="container">
     <div class="form">
         <h2>Calculate your Payment</h2>
