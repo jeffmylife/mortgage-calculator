@@ -116,7 +116,6 @@ $: if (insuranceRate) calculateMortgage();
 
         <label for="downPayment">
             Down payment
-            <p>Active input: {activeInput}</p>
             <div class="down-payment-inputs">
                 <NumberInput bind:value={downPayment} minRange="50000" maxRange={homePrice} on:click={onDownPaymentClick} on:blur={onDownPaymentBlur} />
                 <NumberInput bind:value={downPaymentPercentage} isPercentage={true}/>
